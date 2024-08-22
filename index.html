@@ -76,10 +76,10 @@ body {
   min-height: 72rem;
   justify-content: center;
   align-items: center;
-  animation: 1.5s load-1;
+  animation: 1.5s load-header;
 }
 
-@keyframes load-1 {
+@keyframes load-header {
   0% {
     opacity: 0;
   }
@@ -117,7 +117,7 @@ body {
   display: none;
 }
 
-.loading {
+.loading-screen {
   position: fixed;
   z-index: 2;
   top: 0;
@@ -125,12 +125,12 @@ body {
   width: 100vw;
   height: 100vh;
   background: #111111;
-  animation: 3s load;
+  animation: 3s load-screen;
   opacity: 0;
   pointer-events: none;
 }
 
-@keyframes load {
+@keyframes load-screen {
   0% {
     opacity: 1;
   }
@@ -149,7 +149,7 @@ body {
     rgba(51, 102, 204, 1) 0%,
     rgba(51, 51, 102, 1) 100%
   );
-  height: 0.45rem;
+  height: 0.6rem;
   animation: 1.8s loading-bar linear;
 }
 
@@ -170,7 +170,7 @@ body {
 
   <h1 class="display-none">Lystán</h1>
 
-  <div class="loading">
+  <div class="loading-screen">
     <div class="loading-bar"></div>
   </div>
 
