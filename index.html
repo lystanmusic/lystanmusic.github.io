@@ -1,0 +1,204 @@
+<head>
+
+  <meta charset="UTF-8">
+  <title>Lystán</title>
+  <meta name="author" content="Lystán">
+  <meta name="description" content="Performance DJ & Music Producent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="theme-color" content="#333366">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+<style>
+
+/* Global */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1vh;
+  letter-spacing: 0.06em;
+  scroll-behavior: smooth;
+  background: rgb(51, 102, 204);
+  background: linear-gradient(
+    108deg,
+    rgba(51, 102, 204, 1) 0%,
+    rgba(51, 51, 102, 1) 100%
+  );
+}
+
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  overscroll-behavior-y: contain;
+}
+
+@media (max-width: 50vh) {
+  html {
+    font-size: 2vw;
+  }
+}
+
+.html-insta {
+  font-size: 7.2px;
+}
+
+@media (max-width: 360px) {
+  .html-insta {
+    font-size: 6.6px;
+  }
+}
+
+/* Elements */
+
+.container {
+  padding: 2.4rem 3rem;
+  width: 100%;
+  max-width: 81rem;
+  display: flex;
+  flex-flow: column;
+}
+
+.header {
+  z-index: 3;
+  margin-top: 6rem;
+  min-height: 36rem;
+  justify-content: center;
+  align-items: center;
+  animation: 1.5s load-1;
+}
+
+@keyframes load-1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.footer {
+  margin-top: auto;
+  margin-bottom: 6rem;
+  padding-top: 4.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 1.8rem;
+  color: #cccccc;
+}
+
+/* Logo */
+
+.logo {
+  height: 6.6rem;
+  fill: #ffffff;
+}
+
+/* Aesthetics */
+
+.display-none {
+  display: none;
+}
+
+.loading {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #111111;
+  animation: 3s load;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes load {
+  0% {
+    opacity: 1;
+  }
+  67% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loading-bar {
+  background: #ffffff;
+  background: linear-gradient(
+    108deg,
+    rgba(51, 102, 204, 1) 0%,
+    rgba(51, 51, 102, 1) 100%
+  );
+  height: 0.45rem;
+  animation: 1.8s loading-bar linear;
+}
+
+@keyframes loading-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100vw;
+  }
+}
+  
+</style>
+  
+</head>
+
+<body>
+
+  <h1 class="display-none">Lystán</h1>
+
+  <div class="loading">
+    <div class="loading-bar"></div>
+  </div>
+
+  <div class="container header">
+    <a href="#">
+      <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1554 405" fill="none">
+        <path d="M654 0L504 75V252L600 204V333L558 354V258L504 285V405L654 330V153L558 201V72L600 51V150L654 123V0Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1554 0L1404 75V405L1458 378V285L1554 237V0ZM1500 240V51L1458 72V261L1500 240Z" />
+        <path d="M300 51L354 24V147L300 174V51Z" />
+        <path d="M804 75V99L852 75V381L906 354V48L954 24V0L804 75Z" />
+        <path d="M1254 24V0L1104 75V405L1254 330V306L1158 354V225L1224 192V168L1158 201V72L1254 24Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M150 0L0 75V405L150 330V0ZM96 52L54 73V353L96 332V52Z" />
+      </svg>
+    </a>
+  </div>
+
+  <div class="container footer center">
+    <div class="copyright">© <span id="year">2024</span> - Lystán Music</div>
+  </div>
+
+<script>
+
+/* Copyright Date */
+
+const y = new Date();
+let year = y.getFullYear();
+document.getElementById("year").innerHTML = year;
+
+</script>
+
+</body>
