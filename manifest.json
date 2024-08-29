@@ -1,0 +1,11 @@
+{
+    "name": "Lystán",
+    "short_name": "Lystán",
+    "icons": [{
+        "src": "google-touch-icon.png",
+        "sizes": "512x512"
+    }],
+    "background_color": "#333366",
+    "theme_color": "#ffffff",
+    "display": "fullscreen"
+}
